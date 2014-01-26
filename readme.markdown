@@ -32,3 +32,19 @@ Sprites and Elements are lists which inform the Grid of Pears.
 
 antigrid will supply a schema for producing grids with the sensitivity to
 elements (HTML5 semantics), entities, modules (of various types), and sprites.
+
+##WAT?
+
+Grids come in many sizes, *and shapes*. There are many grid schemas to explore
+in the world of Hypermedia with devices that distill information, exposing
+information's inherent meaning for experience architecture.
+
+Look at ``text-align`` grids ­ here information demands informs the complexity
+of a grid needed. So what is the use-case of a 16 or 12 column grid system?
+
+##Where is the precision?
+
+What other grid system implementations can we develop that are cheaper,
+and hone in on the design case? ­
+
+C'est minimaliste!
