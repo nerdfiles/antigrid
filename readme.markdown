@@ -10,15 +10,19 @@ Write some LESS for antigrid with all dependencies now installed.
 
 ##What's this?
 
+(Grouped by @vendor.)
+
+    ▸ config/         : Initialization. Customer Browser Resets.    @vendor
+    ▸ elements/       : Elemental, Typographical Style Definitions. @vendor
+    ▸ pears/          : UI Semantics.                               @vendor
+    ▸ type/           : Icon Type Semantics, Typesetting.           @vendor
     ▸ ../sprites/     : Design Artifact Books.
-    ▸ config/         : Initialization. Customer Browser Resets.
-    ▸ elements/       : Elemental, Typographical Style Definitions.
     ▸ entities/       : Complex Entity Style Definitions.
     ▸ modules/        : Application Style Definitions.
-    ▸ pears/          : UI Semantics.
     ▸ responses/      : Responses to User Agent Style Definitions.
-    ▸ ../vendor/      : Vendor dependencies: normalize-less, bootstrap-less,
-                        semantic.gs, prefab semantics, etc.
+    ▸ ../vendor/      : Vendor dependencies: normalize-less,
+                        bootstrap-less, semantic.gs, prefab
+                        semantics, etc.
 
 ##What's this got to do with grids?!
 
