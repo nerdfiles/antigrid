@@ -40,7 +40,19 @@ in the world of Hypermedia with devices that distill information, exposing
 information's inherent meaning for experience architecture.
 
 Look at ``text-align`` grids ­ here information demands informs the complexity
-of a grid needed. So what is the use-case of a 16 or 12 column grid system?
+of a grid needed. So what is the use-case of a 16 or 12 column grid system when
+design converges on 2-column, 3-column choices ­ design away the paradox of
+choice!
+
+Can information be semantically architected before framework considerations? ­ 
+
+    All of those things are meant for grids!
+
+    But *when* in the implementation?
+
+    Principle: Code (semantic) markup first, design later.
+
+Now choose yr grid.
 
 ##Where is the precision?
 
@@ -48,3 +60,9 @@ What other grid system implementations can we develop that are cheaper,
 and hone in on the design case? ­
 
 C'est minimaliste!
+
+##Inspiration
+
+* http://www.barrelny.com/blog/text-align-justify-and-rwd/
+* http://semantic.gs/
+* http://getpreboot.com/
