@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>antigrid</title>
+  <link rel="stylesheet" href="../test/antigrid.css" />
+</head>
+<body class="index">
+  <div class="container">
+    <p>Some content.</p>
+    <p>Now here's a list of things:</p>
+    <ul>
+      <li>
+        <div class="thing"
+            itemscope
+            itemtype="http://schema.org/Thing">
+          <dl>
+            <dt itemprop="name">
+              Thing
+            </dt>
+            <dd>
+              <p>I am some content for this thing. I could be JSON, or the Moon.</p>
+            </dd>
+          </dl>
+
+          <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <ul>
+              <li>Home</li>
+              <li>Back</li>
+            </ul>
+          </nav>
+        </div><!-- .thing -->
+      </li>
+    </ul>
+  </div><!-- .container -->
+</body>
+</html>

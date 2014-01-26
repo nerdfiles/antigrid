@@ -206,6 +206,10 @@ table {
   border-spacing: 0;
 }
 
+.container {
+  width: 100%;
+}
+
 .thing {
   background: orange;
 }
@@ -214,6 +218,6 @@ table {
   width: 30%;
 }
 
-.hello {
-  border: 1px solid gold;
+.index {
+  background: green;
 }

@@ -217,3 +217,7 @@ table {
 .thing nav {
   width: 30%;
 }
+
+.index {
+  background: green;
+}

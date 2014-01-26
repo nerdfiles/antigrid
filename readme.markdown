@@ -5,8 +5,28 @@ I hate grid systems so much I think I'll try to make one.
 ##Uhh?
 
     $ npm install; bower install
+    
+##Dev
 
-Write some LESS for antigrid with all dependencies now installed.
+    $ [sudo] npm install -g grunt-cli #?
+
+Some commands:
+
+    $ grunt     # Compile to ./build/*
+    $ grunt w   # Watching, lint-compile to ./test/*
+    $ grunt l   # Linting
+
+Roll yr own HTTP. There's no AJAX here. We won't even submit the forms.
+
+Promise.
+
+##Test
+
+Check ``./test/basic.html``.
+
+Next: *Test-Driven CSS*.
+
+Now, write some LESS for antigrid with all dependencies now installed.
 
 ##What's this?
 
@@ -23,6 +43,8 @@ Write some LESS for antigrid with all dependencies now installed.
     ▸ ../vendor/      : Vendor dependencies: normalize-less,
                         bootstrap-less, semantic.gs, prefab
                         semantics, etc.
+
+Note: We *apply* typesetting and icons in ``./src/elements/`` or ``./src/pears/``.
 
 ##What's this got to do with grids?!
 
