@@ -25,7 +25,7 @@ g = (grunt) ->
           compile: true
       minify:
         files:
-          './deploy/antigrid.min.css':
+          './dist/antigrid.min.css':
             ['./config/base.less']
         options:
           compile: true
