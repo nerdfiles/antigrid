@@ -2,7 +2,9 @@ g = (grunt) ->
   gruntConfig =
     recess:
       lint:
-        src: ['./config/base.less']
+        files:
+          './test/antigrid.css':
+            ['./config/base.less']
         options:
           compile: true
           compress: false
@@ -16,20 +18,24 @@ g = (grunt) ->
           stripColors: false
           zeroUnits: true
       compile:
-        src: ['./config/base.less']
-        dest: './build/antigrid.css'
+        files:
+          './build/antigrid.css':
+            ['./config/base.less']
+        options:
+          compile: true
+      minify:
+        files:
+          './deploy/antigrid.min.css':
+            ['./config/base.less']
         options:
           compile: true
           compress: true
-      minify:
-        src: ['./config/base.less']
-        dest: './deploy/antigrid.min.css'
-        options:
-          compile: true
     watch:
       recess:
-        files: ["./*.less"]
+        files: ["./**/*.less"]
         tasks: ["recess:lint"]
+        options:
+          spawn: false
   
   grunt.initConfig gruntConfig
   
@@ -37,8 +43,8 @@ g = (grunt) ->
   grunt.loadNpmTasks 'grunt-recess'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
-  grunt.registerTask 'default', ['recess:compile', 'watch:recess']
-  grunt.registerTask 'rw', ['recess:lint', 'watch:recess']
-  grunt.registerTask 'lint', 'recess:lint'
+  grunt.registerTask 'default', ['recess:compile']
+  grunt.registerTask 'w', ['watch:recess']
+  grunt.registerTask 'l', ['recess:lint']
  
 module.exports = g
