@@ -24,7 +24,7 @@ Promise.
 
 Check ``./test/basic.html``.
 
-Next: [*Test-Driven CSS*](http://prezi.com/piifihs2ohet/test-driven-css/).
+Next: *Test-Driven CSS*.
 
 Now, write some LESS for antigrid with all dependencies now installed.
 
@@ -88,5 +88,6 @@ C'est minimaliste!
 ##Inspiration
 
 * http://www.barrelny.com/blog/text-align-justify-and-rwd/
+* http://prezi.com/piifihs2ohet/test-driven-css/
 * http://semantic.gs/
 * http://getpreboot.com/
