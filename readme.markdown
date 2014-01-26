@@ -2,6 +2,14 @@
 
 I hate grid systems so much I think I'll try to make one.
 
+##Uhh?
+
+    $ npm install; bower install
+
+Write some LESS for antigrid with all dependencies now installed.
+
+##What's this?
+
     ▸ config/         : Initialization. Customer Browser Resets.
     ▸ elements/       : Elemental, Typographical Style Definitions.
     ▸ entities/       : Complex Entity Style Definitions.
@@ -12,7 +20,7 @@ I hate grid systems so much I think I'll try to make one.
     ▸ vendor/         : Vendor dependencies: normalize-less, bootstrap-less,
                         semantic.gs, prefab semantics, etc.
 
-#What's this got to do with grids?!
+##What's this got to do with grids?!
 
 Grids should fall under ``./pears/``. We'll get there.
 
