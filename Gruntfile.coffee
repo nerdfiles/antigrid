@@ -4,7 +4,7 @@ g = (grunt) ->
       lint:
         files:
           './test/antigrid.css':
-            ['./config/base.less']
+            ['./src/config/base.less']
         options:
           compile: true
           compress: false
@@ -20,19 +20,19 @@ g = (grunt) ->
       compile:
         files:
           './build/antigrid.css':
-            ['./config/base.less']
+            ['./src/config/base.less']
         options:
           compile: true
       minify:
         files:
           './dist/antigrid.min.css':
-            ['./config/base.less']
+            ['./src/config/base.less']
         options:
           compile: true
           compress: true
     watch:
       recess:
-        files: ["./**/*.less"]
+        files: ["./src/**/*.less"]
         tasks: ["recess:lint"]
         options:
           spawn: false
