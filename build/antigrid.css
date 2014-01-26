@@ -206,6 +206,14 @@ table {
   border-spacing: 0;
 }
 
+.thing {
+  background: orange;
+}
+
+.thing nav {
+  width: 30%;
+}
+
 .hello {
   border: 1px solid gold;
 }
