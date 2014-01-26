@@ -24,7 +24,7 @@ Promise.
 
 Check ``./test/basic.html``.
 
-Next: *Test-Driven CSS*.
+Next: [*Test-Driven CSS*](http://prezi.com/piifihs2ohet/test-driven-css/).
 
 Now, write some LESS for antigrid with all dependencies now installed.
 
