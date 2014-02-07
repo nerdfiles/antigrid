@@ -1,5 +1,47 @@
-.grid () {
-  .container {
-    width: 100%;
-  }
+/**
+ * @usage
+ * ul { .__bundle(); }
+ *
+ * @idea
+ * <ul class="__bundle">
+ * <li class="__slot"></li>
+ * <li class="__slot"></li>
+ * <li class="__slot"></li>
+ * <li class="__tie"></li>
+ * </ul>
+ */
+.__slot-thirds () {
+    width: 31%;
+    padding-top: 31%;
+    margin-bottom: 3%;
+    background: orange;
+    padding-left: 0;
+    display: inline-block;
+}
+
+.__bundle () {
+
+    ul.bundle {
+        padding-left: 0;
+        text-align: justify;
+        font-size: 0.1px;
+    }
+
+    ul.bundle:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+
+    @media (max-width: 1600px) {
+        ul.bundle li {
+            .__slot-thirds();
+        }
+    }
+
+}
+
+// Initialize grid.
+body {
+    .__bundle();
 }

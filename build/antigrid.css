@@ -206,8 +206,33 @@ table {
   border-spacing: 0;
 }
 
-.container {
+/**
+ * @usage
+ * ul { .__bundle(); }
+ *
+ * @idea
+ * <ul class="__bundle">
+ * <li class="__slot"></li>
+ * <li class="__slot"></li>
+ * <li class="__slot"></li>
+ * <li class="__tie"></li>
+ * </ul>
+ */
+
+body ul {
+  font-size: 0.1px;
+  text-align: justify;
+}
+
+body ul:after {
+  display: inline-block;
   width: 100%;
+  content: '';
+}
+
+body ul li {
+  display: inline-block;
+  width: 30%;
 }
 
 .thing {
