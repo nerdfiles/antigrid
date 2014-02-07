@@ -39,7 +39,7 @@ body ul.bundle:after {
     display: inline-block;
   }
   body ul.bundle li:target {
-    background: gray;
+    background: cyan;
     width: 100%;
   }
 }
