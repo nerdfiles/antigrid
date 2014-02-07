@@ -264,6 +264,10 @@ body ul.bundle:after {
     width: 33%;
     background-color: cyan;
   }
+  body ul.bundle li:target menu,
+  body ul.bundle li:target menu li {
+    background-color: pink;
+  }
   body ul.bundle li p {
     margin: 0 .834rem .834rem;
     font-size: 17.51329px;
