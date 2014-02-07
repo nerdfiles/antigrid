@@ -14,13 +14,16 @@
     width: 31%;
     //padding-top: 31%;
     margin-bottom: 3%;
-    background: orange;
+    background-color: orange;
     padding: 0;
     display: inline-block;
-
+    
+    -webkit-transition: width 1s, background-color 1s, -webkit-transform 1s;
+    transition: width 1s, background-color 1s, transform 1s;
+    
     &:target {
-        background: cyan;
-        width: 100%;
+        background-color: cyan;
+        width: 33%;
     }
 
     .copy-type();
