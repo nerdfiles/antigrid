@@ -206,6 +206,10 @@ table {
   border-spacing: 0;
 }
 
+p {
+  font-size: 17.51329px;
+}
+
 /**
  * @usage
  * ul { .__bundle(); }
@@ -235,7 +239,6 @@ body ul.bundle:after {
   body ul.bundle li {
     display: inline-block;
     width: 21%;
-    padding-top: 31%;
     padding-left: 0;
     margin-bottom: 3%;
     background: orange;
@@ -246,7 +249,6 @@ body ul.bundle:after {
   body ul.bundle li {
     display: inline-block;
     width: 31%;
-    padding-top: 31%;
     padding-left: 0;
     margin-bottom: 3%;
     background: orange;
