@@ -35,7 +35,11 @@ body ul.bundle:after {
     width: 31%;
     margin-bottom: 3%;
     background: orange;
-    padding-left: 0;
+    padding: 0;
     display: inline-block;
+  }
+  body ul.bundle li:target {
+    background: gray;
+    width: 100%;
   }
 }
