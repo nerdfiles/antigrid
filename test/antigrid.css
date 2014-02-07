@@ -231,7 +231,18 @@ body ul.bundle:after {
   content: '';
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1024px) {
+  body ul.bundle li {
+    display: inline-block;
+    width: 21%;
+    padding-top: 31%;
+    padding-left: 0;
+    margin-bottom: 3%;
+    background: orange;
+  }
+}
+
+@media (min-width: 800px) {
   body ul.bundle li {
     display: inline-block;
     width: 31%;

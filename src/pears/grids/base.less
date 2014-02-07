@@ -19,6 +19,15 @@
     display: inline-block;
 }
 
+.__slot-forths () {
+    width: 21%;
+    padding-top: 31%;
+    margin-bottom: 3%;
+    background: orange;
+    padding-left: 0;
+    display: inline-block;
+}
+
 .__bundle () {
 
     ul.bundle {
@@ -33,7 +42,13 @@
         width: 100%;
     }
 
-    @media (max-width: 1600px) {
+    @media (max-width: 1024px) {
+        ul.bundle li {
+            .__slot-forths();
+        }
+    }
+
+    @media (min-width: 800px) {
         ul.bundle li {
             .__slot-thirds();
         }

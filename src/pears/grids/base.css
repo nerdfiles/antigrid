@@ -21,7 +21,17 @@ body ul.bundle:after {
   display: inline-block;
   width: 100%;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1024px) {
+  body ul.bundle li {
+    width: 21%;
+    padding-top: 31%;
+    margin-bottom: 3%;
+    background: orange;
+    padding-left: 0;
+    display: inline-block;
+  }
+}
+@media (min-width: 800px) {
   body ul.bundle li {
     width: 31%;
     padding-top: 31%;
