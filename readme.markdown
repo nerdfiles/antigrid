@@ -60,14 +60,15 @@ elements (HTML5 semantics), entities, modules (of various types), and sprites.
 
 ##WAT?
 
+``text-align`` grids. Or what about the damn fly-by-night grid? Two things?
+
+Float 'em.
+
+Re-use it? Well at least there's a protocol for re-use, even for *this*!
+
 Grids come in many sizes, *and shapes*. There are many grid schemas to explore
 in the world of Hypermedia with devices that distill information, exposing
 information's inherent meaning for experience architecture.
-
-Look at ``text-align`` grids. Here information demands informs the complexity
-of a grid needed. So what is the use-case of a 16 or 12 column grid system when
-design converges on 2-column, 3-column choices ­ design away the paradox of
-choice!
 
 Can information be semantically architected before framework considerations? ­ 
 
