@@ -13,8 +13,9 @@ I hate grid systems so much I think I'll try to make one.
 Some commands:
 
     $ grunt     # Compile to ./build/*
-    $ grunt w   # Watching, lint-compile to ./test/*
     $ grunt l   # Linting
+    $ grunt s   # Generate some sprite.
+    $ grunt w   # Watching, lint-compile to ./test/*
 
 Roll yr own HTTP. There's no AJAX here. We won't even submit the forms.
 
@@ -63,7 +64,7 @@ Grids come in many sizes, *and shapes*. There are many grid schemas to explore
 in the world of Hypermedia with devices that distill information, exposing
 information's inherent meaning for experience architecture.
 
-Look at ``text-align`` grids ­ here information demands informs the complexity
+Look at ``text-align`` grids. Here information demands informs the complexity
 of a grid needed. So what is the use-case of a 16 or 12 column grid system when
 design converges on 2-column, 3-column choices ­ design away the paradox of
 choice!
