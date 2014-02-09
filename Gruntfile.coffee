@@ -36,15 +36,21 @@ g = (grunt) ->
         tasks: ["recess:lint"]
         options:
           spawn: false
-  
+    sprite:
+      all:
+        src: 'images/*.png',
+        destImg: 'sprites/sheetN.png',
+        destCSS: 'sprites/sheetN.css'
   grunt.initConfig gruntConfig
   
   grunt.loadNpmTasks 'grunt-hustler'
   grunt.loadNpmTasks 'grunt-recess'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-spritesmith'
 
   grunt.registerTask 'default', ['recess:compile']
-  grunt.registerTask 'w', ['watch:recess']
   grunt.registerTask 'l', ['recess:lint']
+  grunt.registerTask 's', ['sprite:all']
+  grunt.registerTask 'w', ['watch:recess']
  
 module.exports = g
