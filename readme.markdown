@@ -2,6 +2,10 @@
 
 I hate grid systems so much I think I'll try to make one.
 
+#'Pataphysical Modeling
+
+1. Lattice Anomalaic Interactions Language
+
 ##Uhh?
 
     $ npm install; bower install
