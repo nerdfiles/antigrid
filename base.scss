@@ -33,7 +33,7 @@ $a--active         : "#003399";
 }
 
 
-/** ------------------------------ Basic Functions
+/** ----------------------------- Basic Functions
 
     @description
 
@@ -59,7 +59,7 @@ $a--active         : "#003399";
 }
 
 
-/** ------------------------------ Media Queries
+/** ----------------------------- Media Queries
 
     @description
 
@@ -206,7 +206,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 }
 
 
-/** ------------------------------ Implementation
+/** ----------------------------- Implementation
 
     @usage
 
@@ -246,7 +246,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 }
 
 
-/** ------------------------------ Normalization
+/** ----------------------------- Normalization
 
     @consider https://github.com/marxo/Canonical.css/blob/master/canonical.scss
 
@@ -273,3 +273,4 @@ pre {
 strong {
   font-style: italic;
 }
+
