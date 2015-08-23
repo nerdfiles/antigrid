@@ -9,7 +9,9 @@
     \_____|_| |_| \__)_|\___ |_|   |_|\____|
                        (_____|
 
-A SASS-y "abstract" and lightweight responsive grid system.
+A SASS-y, idiomatic, "abstract" but lightweight responsive grid system for 
+vertically centered grids/elements, "flanks", "castling", and full viewport 
+splits.
 
 @project   antigrid
 @version   0.0.1
@@ -87,7 +89,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* ------------------------------ Defaults  */
 /* ------------------------------ Global  */
-/* line 43, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 * {
   box-sizing: border-box;
 }
@@ -133,7 +135,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* ------------------------------ Grid System  */
 /* ------------------------------ Elements  */
 /* ------------------------------ Implementation  */
-/* line 405, ../sass/screen.scss */
+/* line 407, ../sass/screen.scss */
 :root {
   /*
     A full-height viewport splitter tool. Use at top level of SASS/CSS document.
@@ -170,16 +172,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   */
 }
-/* line 168, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 :root, :root body {
   height: 100%;
 }
-/* line 172, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 :root body > .rank {
   min-height: 100%;
   display: flex;
 }
-/* line 177, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 :root body > .rank > .rank {
   padding-left: 0;
   padding-right: 0;
@@ -189,7 +191,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   flex-direction: column;
 }
 
-/* line 409, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 :root.with-centered-ranks {
   /*
     A full-height viewport splitter tool. Use at top level of SASS/CSS document.
@@ -226,16 +228,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   */
 }
-/* line 168, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 :root.with-centered-ranks, :root.with-centered-ranks body {
   height: 100%;
 }
-/* line 172, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 :root.with-centered-ranks body > .rank {
   min-height: 100%;
   display: flex;
 }
-/* line 177, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 :root.with-centered-ranks body > .rank > .rank {
   padding-left: 0;
   padding-right: 0;
@@ -281,32 +283,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       --------
 
   */
-  /* line 261, ../sass/screen.scss */
+  /* line 263, ../sass/screen.scss */
   [class*="-l6"] {
     width: 100%;
   }
 
-  /* line 265, ../sass/screen.scss */
+  /* line 267, ../sass/screen.scss */
   [class*="-l5"] {
     width: 83.333333334%;
   }
 
-  /* line 269, ../sass/screen.scss */
+  /* line 271, ../sass/screen.scss */
   [class*="-l4"] {
     width: 66.666666667%;
   }
 
-  /* line 273, ../sass/screen.scss */
+  /* line 275, ../sass/screen.scss */
   [class*="-l3"] {
     width: 50%;
   }
 
-  /* line 277, ../sass/screen.scss */
+  /* line 279, ../sass/screen.scss */
   [class*="-l2"] {
     width: 33.333333333%;
   }
 
-  /* line 281, ../sass/screen.scss */
+  /* line 283, ../sass/screen.scss */
   [class*="-l1"] {
     width: 16.666666667%;
   }
@@ -346,32 +348,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       --------
 
   */
-  /* line 261, ../sass/screen.scss */
+  /* line 263, ../sass/screen.scss */
   [class*="-m6"] {
     width: 100%;
   }
 
-  /* line 265, ../sass/screen.scss */
+  /* line 267, ../sass/screen.scss */
   [class*="-m5"] {
     width: 83.333333334%;
   }
 
-  /* line 269, ../sass/screen.scss */
+  /* line 271, ../sass/screen.scss */
   [class*="-m4"] {
     width: 66.666666667%;
   }
 
-  /* line 273, ../sass/screen.scss */
+  /* line 275, ../sass/screen.scss */
   [class*="-m3"] {
     width: 50%;
   }
 
-  /* line 277, ../sass/screen.scss */
+  /* line 279, ../sass/screen.scss */
   [class*="-m2"] {
     width: 33.333333333%;
   }
 
-  /* line 281, ../sass/screen.scss */
+  /* line 283, ../sass/screen.scss */
   [class*="-m1"] {
     width: 16.666666667%;
   }
@@ -411,50 +413,50 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       --------
 
   */
-  /* line 261, ../sass/screen.scss */
+  /* line 263, ../sass/screen.scss */
   [class*="-s6"] {
     width: 100%;
   }
 
-  /* line 265, ../sass/screen.scss */
+  /* line 267, ../sass/screen.scss */
   [class*="-s5"] {
     width: 83.333333334%;
   }
 
-  /* line 269, ../sass/screen.scss */
+  /* line 271, ../sass/screen.scss */
   [class*="-s4"] {
     width: 66.666666667%;
   }
 
-  /* line 273, ../sass/screen.scss */
+  /* line 275, ../sass/screen.scss */
   [class*="-s3"] {
     width: 50%;
   }
 
-  /* line 277, ../sass/screen.scss */
+  /* line 279, ../sass/screen.scss */
   [class*="-s2"] {
     width: 33.333333333%;
   }
 
-  /* line 281, ../sass/screen.scss */
+  /* line 283, ../sass/screen.scss */
   [class*="-s1"] {
     width: 16.666666667%;
   }
 
-  /* line 286, ../sass/screen.scss */
+  /* line 288, ../sass/screen.scss */
   [class*="file"][class*="s6"] {
     padding-left: 0;
     padding-right: 0;
   }
 }
-/* line 425, ../sass/screen.scss */
+/* line 427, ../sass/screen.scss */
 [class*="file"] {
   display: block;
   float: left;
   padding: 0 10px;
 }
 
-/* line 431, ../sass/screen.scss */
+/* line 433, ../sass/screen.scss */
 .rank {
   /*
     @abstract
@@ -463,33 +465,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   max-width: "1000px";
   margin: 0 auto;
 }
-/* line 201, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .rank:before {
   content: "";
   display: table;
 }
-/* line 206, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .rank:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 216, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .rank .rank > [class*="file"]:first-child {
   padding-left: 0;
 }
-/* line 220, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .rank .rank > [class*="file"]:last-child {
   padding-right: 0;
 }
 
-/* line 435, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 [class*="file"] img {
   width: 100%;
   height: auto;
 }
 
-/* line 440, ../sass/screen.scss */
+/* line 442, ../sass/screen.scss */
 .castling {
   /*
     @usage
@@ -502,23 +504,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     </ul>
   */
 }
-/* line 306, ../sass/screen.scss */
+/* line 308, ../sass/screen.scss */
 .castling:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
-/* line 312, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 .castling img {
   max-width: 100%;
 }
-/* line 314, ../sass/screen.scss */
+/* line 316, ../sass/screen.scss */
 .castling {
   text-align: justify;
   font-size: 0;
   padding: 0;
 }
-/* line 320, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 .castling li {
   list-style: none;
   display: inline-block;
@@ -527,13 +529,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 16px;
   text-align: left;
 }
-/* line 332, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 .castling .break {
   width: 100%;
   height: 0;
 }
 
-/* line 444, ../sass/screen.scss */
+/* line 446, ../sass/screen.scss */
 .flank {
   /*
     Flanks include rows.
@@ -552,7 +554,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
   */
 }
-/* line 358, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .flank .row-1 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -560,7 +562,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: calc((((100vh - 100px) / 6) * 1) - 10px);
   margin-bottom: 10px;
 }
-/* line 358, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .flank .row-2 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -568,7 +570,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: calc((((100vh - 100px) / 6) * 2) - 10px);
   margin-bottom: 10px;
 }
-/* line 358, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .flank .row-3 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -576,7 +578,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: calc((((100vh - 100px) / 6) * 3) - 10px);
   margin-bottom: 10px;
 }
-/* line 358, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .flank .row-4 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -584,7 +586,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: calc((((100vh - 100px) / 6) * 4) - 10px);
   margin-bottom: 10px;
 }
-/* line 358, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .flank .row-5 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -592,7 +594,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: calc((((100vh - 100px) / 6) * 5) - 10px);
   margin-bottom: 10px;
 }
-/* line 358, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .flank .row-6 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -606,23 +608,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     @consider https://github.com/marxo/Canonical.css/blob/master/canonical.scss
 
 **/
-/* line 378, ../sass/screen.scss */
+/* line 380, ../sass/screen.scss */
 * a {
   color: "#111111";
 }
-/* line 382, ../sass/screen.scss */
+/* line 384, ../sass/screen.scss */
 * a:link {
   color: "#111111";
 }
-/* line 386, ../sass/screen.scss */
+/* line 388, ../sass/screen.scss */
 * a:visited {
   color: "#999999";
 }
-/* line 390, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 * a:hover {
   color: "#f1f1f1";
 }
-/* line 394, ../sass/screen.scss */
+/* line 396, ../sass/screen.scss */
 * a:active {
   color: "#003399";
 }
@@ -631,7 +633,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /*
   @note https://github.com/sass/sass/issues/926
 */
-/* line 504, ../sass/screen.scss */
+/* line 506, ../sass/screen.scss */
 body {
   font-family: Open Sans;
 }
