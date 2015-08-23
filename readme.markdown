@@ -24,11 +24,10 @@ Fairly logical, consistent, readable, and CSSDoc-ish.
 
 Based on [Compass](http://compass-style.org/) with some lifting from ZURB’s Foundation 5. I have also used 
 simple and functional Chess idiom throughout the System to, with hope, make
-sense of things as one holistic strategy to layout.
-
-Helpful media queries for:
+sense of things as one holistic strategy to layout. And helpful media queries 
+have been provided for:
 
 1. Small
-2. Slinder
+2. "Slinder"
 3. Medium
 4. Large
