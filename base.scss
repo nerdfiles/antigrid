@@ -1,0 +1,190 @@
+/* ------------------------------ Global  */
+
+* {
+  box-sizing : border-box;
+}
+
+
+/* ------------------------------ Media Queries  */
+
+$small-range: (0em, 20em);        /* 0, 320px */
+$slinder-range: (23.438em, 50em); /* 641px, 800px */
+$medium-range: (50.063em, 64em);  /* 641px, 1024px */
+$large-range: (64.063em, 90em);   /* 1025px, 1440px */
+$xlarge-range: (90.063em, 120em); /* 1441px, 1920px */
+$xxlarge-range: (120.063em);      /* 1921px */
+
+$screen: "only screen" !default;
+
+$landscape: "#{$screen} and (orientation: landscape)" !default;
+$portrait: "#{$screen} and (orientation: portrait)" !default;
+$webkit: "#{$screen} and (-webkit-min-device-pixel-ratio:0)" !default;
+
+$small-up: $screen !default;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
+$small: $small-up;
+
+$slinder-up: "#{$screen} and (min-width:#{lower-bound($slinder-range)})" !default;
+$slinder-only: "#{$screen} and (min-width:#{lower-bound($slinder-range)}) and (max-width:#{upper-bound($slinder-range)})" !default;
+$slinder: $slinder-up;
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})" !default;
+$medium: $medium-up;
+
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})" !default;
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})" !default;
+$large: $large-up;
+
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})" !default;
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})" !default;
+
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
+
+
+/* ------------------------------ System  */
+
+@mixin _rank ( $child: "rank" ) {
+
+  &:before {
+    content : "";
+    display : table;
+  }
+
+  &:after {
+    content : "";
+    display : table;
+    clear   : both;
+  }
+
+  width     : 100%;
+  max-width : 1000px;
+  margin    : 0 auto;
+
+  & .#{$child} > [class*="span"]:first-child {
+    padding-left : 0;
+  }
+
+}
+
+@mixin _file ($response: "l") {
+
+  [class*="-#{$response}6"] {
+    width: 100%;
+  }
+
+  [class*="-#{$response}5"] {
+    width: 83.333333334%;
+  }
+
+  [class*="-#{$response}4"] {
+    width: 66.666666667%;
+  }
+
+  [class*="-#{$response}3"] {
+    width: 50%;
+  }
+
+  [class*="-#{$response}2"] {
+    width: 33.333333333%;
+  }
+
+  [class*="-#{$response}1"] {
+    width: 16.666666667%;
+  }
+
+}
+
+
+/* ------------------------------ Elements  */
+
+@mixin anchors($default, $link, $visited, $hover, $active) {
+
+  a {
+
+    color: $default;
+
+    &:link {
+      color: $link;
+    }
+
+    &:visited {
+      color: $visited;
+    }
+
+    &:hover {
+      color: $hover;
+    }
+
+    &:active {
+      color: $active;
+    }
+
+  }
+
+}
+
+
+/** ------------------------------ Implementation
+
+    @usage
+      <div class="rank">
+        <div class="file-l{{N}}-m{{N}}-s{{N}}">
+        ...
+        </div>
+      </div
+
+**/
+
+@media screen and (min-width: 960px) {
+  @include _file($response: "l");
+}
+
+@media screen and (min-width: 500px) and (max-width: 959px) {
+  @include _file($response: "m");
+}
+
+@media screen and (max-width: 499px) {
+  @include _file($response: "s");
+}
+
+[class*="file"] {
+  display : block;
+  float   : left;
+  padding : 0 10px;
+}
+
+.rank {
+  @include _rank($child: "rank");
+}
+
+[class*="file"] img {
+  width  : 100%;
+  height : auto;
+}
+
+
+/* ------------------------------ Normalization  */
+
+* {
+  line-height: 1.25em;
+  @include anchors($default: "#111111", $link: "#111111", $visited: "#999999", $hover: "#f1f1f1", $active: "#003399");
+}
+
+body {
+  font-family: sans-serif;
+  color: #313233;
+}
+
+p, img {
+  margin: 0 0 20px 0;
+}
+
+pre {
+  margin: 1.6em 0;
+}
+
+strong {
+  font-style: italic;
+}
