@@ -120,7 +120,10 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 /* ------------------------------ Grid System  */
 
-@mixin _rank( $child: "rank", $max-width: "100%") {
+@mixin _rank( $child: "rank", $max-width: "100%" ) {
+  /*
+    @detail
+  */
 
   &:before {
     content : "";
@@ -143,7 +146,10 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 }
 
-@mixin _file($response: "l") {
+@mixin _file( $response: "l" ) {
+  /*
+    @detail
+  */
 
   [class*="-#{$response}6"] {
     width: 100%;
@@ -174,7 +180,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 /* ------------------------------ Elements  */
 
-@mixin anchors($default, $link, $visited, $hover, $active) {
+@mixin anchors( $default, $link, $visited, $hover, $active ) {
 
   a {
 
