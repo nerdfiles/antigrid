@@ -3,3 +3,4 @@ vendor/
 build/*
 env/
 .DS_Store
+.sass-cache/
