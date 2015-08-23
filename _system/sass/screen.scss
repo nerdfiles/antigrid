@@ -74,16 +74,16 @@ $a--active         : "#003399";
 
     @usage
 
-      @media #{$small} {
+      @media #{\$small} {
       }
 
-      @media #{$slinder} {
+      @media #{\$slinder} {
       }
 
-      @media #{$medium} {
+      @media #{\$medium} {
       }
 
-      @media #{$large} {
+      @media #{\$large} {
       }
 
 **/
