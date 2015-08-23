@@ -107,7 +107,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 /* ------------------------------ Grid System  */
 
-@mixin _rank ( $child: "rank", $max-width: "100%") {
+@mixin _rank( $child: "rank", $max-width: "100%") {
 
   &:before {
     content : "";
@@ -130,7 +130,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 }
 
-@mixin _file ($response: "l") {
+@mixin _file($response: "l") {
 
   [class*="-#{$response}6"] {
     width: 100%;
