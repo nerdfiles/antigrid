@@ -17,10 +17,14 @@ A SASS-y tiny and lightweight responsive grid system with Chess nomenclature.
 
 /* ------------------------------ Defaults  */
 
-$rankName         : "rank";
-$fileName         : "file";
-$global-max-width : "1000px";
-
+$rankName          : "rank";
+$fileName          : "file";
+$default-max-width : "1000px";
+$a--default        : "#111111";
+$a--link           : "#111111";
+$a--visited        : "#999999";
+$a--hover          : "#f1f1f1";
+$a--active         : "#003399";
 
 /* ------------------------------ Global  */
 
@@ -227,7 +231,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 }
 
 .#{$rankName} {
-  @include _rank($child: $rankName, $max-width: $global-max-width);
+  @include _rank($child: $rankName, $max-width: $default-max-width);
 }
 
 [class*="#{$fileName}"] img {
@@ -244,7 +248,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 * {
   line-height: 1.25em;
-  @include anchors($default: "#111111", $link: "#111111", $visited: "#999999", $hover: "#f1f1f1", $active: "#003399");
+  @include anchors($default: $a--default, $link: $a--link, $visited: $a--visited, $hover: $a--hover, $active: $a--active);
 }
 
 body {
