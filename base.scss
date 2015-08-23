@@ -122,7 +122,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 @mixin _rank( $child: "rank", $max-width: "100%" ) {
   /*
-    @detail
+    @abstract
   */
 
   &:before {
@@ -148,7 +148,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 @mixin _file( $response: "l" ) {
   /*
-    @detail
+    @abstract
   */
 
   [class*="-#{$response}6"] {
