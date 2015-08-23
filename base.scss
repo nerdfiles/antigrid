@@ -65,7 +65,7 @@ $xxlarge-up    : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)})" !d
 $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and (max-width: #{upper-bound($xxlarge-range)})" !default;
 
 
-/* ------------------------------ System  */
+/* ------------------------------ Grid System  */
 
 @mixin _rank ( $child: "rank" ) {
 
