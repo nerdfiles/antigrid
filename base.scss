@@ -7,10 +7,14 @@
 
 /** ------------------------------ Basic Functions
 
+    @description
+
+      Lifted from ZURB's Foundation 5.
+
     @see http://sass-lang.com/documentation/Sass/Script/Functions.html#nth-instance_method,
       http://sass-lang.com/documentation/Sass/Script/Functions.html#length-instance_method
 
-*/
+**/
 
 @function lower-bound($range) {
   @if length($range) <= 0 {
@@ -28,6 +32,10 @@
 
 
 /** ------------------------------ Media Queries
+
+    @description
+
+      Modified from ZURB's Foundation 5.
 
     @usage
 
