@@ -217,6 +217,10 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
     padding-left: 0;
   }
 
+  & .#{$child} > [class*="#{$fileName}"]:last-child {
+    padding-right: 0;
+  }
+
 }
 
 @mixin _file( $response: "l" ) {
@@ -278,6 +282,13 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
     width: 16.666666667%;
   }
 
+  @if $response == 's' {
+    [class*="#{$fileName}"][class*="s6"] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
 }
 
 @mixin castling( $width: 23% ) {
@@ -293,33 +304,29 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
   */
 
   &:after {
-    content       : '';
-    display       : inline-block;
-    width         : 100%;
-    /*border-bottom : 5px dashed #922d8d;*/
+    content : '';
+    display : inline-block;
+    width   : 100%;
   }
+
+  img { max-width: 100%; }
 
   & {
 
     text-align  : justify;
-    /*font-size   : 0;*/
-    font-size   : 0.1px;
+    font-size   : 0;
     padding     : 0;
 
     li {
-      list-style    : none;
-      display       : inline-block;
-      width         : $width;
-      /*height        : 0;*/
-      transition    : all 150ms ease-out;
-      font-size     : 16px;
-      text-align    : left;
+      list-style : none;
+      display    : inline-block;
+      width      : $width;
+      transition : all 150ms ease-out;
+      font-size  : 16px;
+      text-align : left;
     }
 
     .interpose {
-      padding       : 0;
-      /*background    : none;*/
-      border-bottom : 5px solid #922d8d;
     }
 
     .break {

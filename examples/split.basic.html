@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <title>antigrid - Split</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link
     rel="stylesheet"
     href="../_system/stylesheets/screen.css"
@@ -15,7 +16,10 @@
 
   <body>
     <div class="rank">
+
       <div class="rank example--split-rank-1">
+
+        <h2>Flank (vertical grid)</h2>
 
         <div class="flank">
           <div class="row-1">
@@ -33,7 +37,10 @@
         </div>
 
       </div>
+
       <div class="rank example--split-rank-2">
+
+        <h2>Castling (floatless grid)</h2>
 
         <ul class="castling">
           <li>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur.</li>
@@ -42,7 +49,41 @@
           <li>...</li>
         </ul>
 
+        <hr />
+
+        <h2>With <code>&lt;li class="break"&gt;</code> break</h2>
+
+        <ul class="castling">
+          <li>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur.</li>
+          <li class="break">I'm a break.</li>
+          <li>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur.</li>
+          <li>...</li>
+        </ul>
+
+        <hr />
+
+        <h2>With <code>&lt;li class="interpose"&gt;</code></h2>
+
+        <ul class="castling">
+          <li>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur.</li>
+          <li class="interpose">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=2&w=350&h=150">
+          </li>
+          <li>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur.</li>
+          <li>...</li>
+        </ul>
+
+        <hr />
+
+        <h2>Justified blocks (missing <code>&lt;li&gt;</code>s)</h2>
+
+        <ul class="castling">
+          <li>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur.</li>
+          <li>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur.</li>
+        </ul>
+
       </div>
+
     </div>
   </body>
 
