@@ -7,3 +7,14 @@
 .example--split-rank-2 {
   background-color: #05A5FC;
 }
+
+/* line 9, ../../sass/examples/split.scss */
+h2 {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+/* line 14, ../../sass/examples/split.scss */
+.rank {
+  overflow-x: hidden;
+}
