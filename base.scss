@@ -27,7 +27,23 @@
 }
 
 
-/* ------------------------------ Media Queries  */
+/** ------------------------------ Media Queries
+
+    @usage
+
+      @media #{$small} {
+      }
+
+      @media #{$slinder} {
+      }
+
+      @media #{$medium} {
+      }
+
+      @media #{$large} {
+      }
+
+**/
 
 $small-range   : (0em, 20em);        /* 0, 320px */
 $slinder-range : (23.438em, 50em);   /* 641px, 800px */
@@ -151,6 +167,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 /** ------------------------------ Implementation
 
     @usage
+
       <div class="rank">
         <div class="file-l{{N}}-m{{N}}-s{{N}}">
         ...
