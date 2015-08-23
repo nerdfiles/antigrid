@@ -67,7 +67,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 /* ------------------------------ Grid System  */
 
-@mixin _rank ( $child: "rank" ) {
+@mixin _rank ( $child: "rank", $max-width: "100%") {
 
   &:before {
     content : "";
@@ -81,7 +81,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
   }
 
   width     : 100%;
-  max-width : 1000px;
+  max-width : $max-width;
   margin    : 0 auto;
 
   & .#{$child} > [class*="#{$child}"]:first-child {
@@ -178,7 +178,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 }
 
 .rank {
-  @include _rank($child: "rank");
+  @include _rank($child: "rank", $max-width: "1000px");
 }
 
 [class*="file"] img {
