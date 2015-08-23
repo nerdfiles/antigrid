@@ -125,9 +125,15 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 /* ------------------------------ Utilities  */
 
-@mixin split($enable: false) {
+@mixin split($enable: false, $vertical-center: false) {
   /*
     A full-height viewport splitter tool. Use at top level of SASS/CSS document.
+
+    @note If $vertical-center is true, then we are expecting that our grid 
+          system will not be applied for the topmost level; so nesting within 
+          another arbitrary, non-semantic layer will be necessary; that is, 
+          three "ranks" will be necessary before the grid can take place 
+          with centering.
 
     @usage
 
@@ -171,7 +177,9 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
       flex            : 1;
       min-height      : 100%;
 
-      display         : flex;
+      @if $vertical-center == true {
+        display         : flex;
+      }
       justify-content : center;
       flex-direction  : column;
     }
@@ -210,6 +218,14 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 @mixin _file( $response: "l" ) {
   /*
     @abstract
+    @usage
+
+      <div class="rank">
+        <div class="file-l{{N}}-m{{N}}-s{{N}}">
+        ...
+        </div>
+      </div
+
     @detail file-l4-m3-s6::file-l2-m3-s6
 
       "large"
@@ -290,19 +306,14 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 }
 
 
-/** ----------------------------- Implementation
+/* ------------------------------ Implementation  */
 
-    @usage
-
-      <div class="rank">
-        <div class="file-l{{N}}-m{{N}}-s{{N}}">
-        ...
-        </div>
-      </div
-
-**/
 :root {
-  @include split($enable: true);
+  @include split($enable: true, $vertical-center: false);
+}
+
+:root.with-centered-ranks {
+  @include split($enable: true, $vertical-center: true);
 }
 
 @media screen and (min-width: 960px) {
@@ -346,6 +357,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 body {
   font-family : sans-serif;
   color       : #313233;
+  margin     : 0;
 }
 
 p, img {
