@@ -62,7 +62,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
   max-width : 1000px;
   margin    : 0 auto;
 
-  & .#{$child} > [class*="span"]:first-child {
+  & .#{$child} > [class*="#{$child}"]:first-child {
     padding-left : 0;
   }
 
