@@ -42,7 +42,7 @@ g = (grunt) ->
         destImg: 'sprites/sheetN.png',
         destCSS: 'sprites/sheetN.css'
   grunt.initConfig gruntConfig
-  
+
   grunt.loadNpmTasks 'grunt-hustler'
   grunt.loadNpmTasks 'grunt-recess'
   grunt.loadNpmTasks 'grunt-contrib-watch'
@@ -52,5 +52,5 @@ g = (grunt) ->
   grunt.registerTask 'l', ['recess:lint']
   grunt.registerTask 's', ['sprite:all']
   grunt.registerTask 'w', ['watch:recess']
- 
+
 module.exports = g

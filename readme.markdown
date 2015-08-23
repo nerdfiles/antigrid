@@ -2,6 +2,16 @@
 
 I hate grid systems so much I think I'll try to make one.
 
+##'Pataphysical Modeling
+
+    1. Lattice Anomalaic Interactions Language
+    2. Ambisonic Amplituhedrons
+    3. Nomological Soundness
+    4. Graphemes and Metonymical Migration
+    5. Cartesian Schemas
+    6. Evolutional Methods
+    7. Andronarratives
+
 ##Uhh?
 
     $ npm install; bower install
