@@ -1,7 +1,7 @@
 /* ------------------------------ Global  */
 
 * {
-  box-sizing : border-box;
+  box-sizing: border-box;
 }
 
 
@@ -101,7 +101,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
   margin    : 0 auto;
 
   & .#{$child} > [class*="#{$child}"]:first-child {
-    padding-left : 0;
+    padding-left: 0;
   }
 
 }
@@ -212,8 +212,8 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 }
 
 body {
-  font-family: sans-serif;
-  color: #313233;
+  font-family : sans-serif;
+  color       : #313233;
 }
 
 p, img {
