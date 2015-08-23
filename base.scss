@@ -50,7 +50,6 @@ $a--active         : "#003399";
       http://sass-lang.com/documentation/Sass/Script/Functions.html#length-instance_method
 
 **/
-
 @function lower-bound($range) {
   @if length($range) <= 0 {
     @return 0;
@@ -87,7 +86,6 @@ $a--active         : "#003399";
       }
 
 **/
-
 $small-range   : (0em, 20em);        /* 0, 320px */
 $slinder-range : (23.438em, 50em);   /* 641px, 800px */
 $medium-range  : (50.063em, 64em);   /* 641px, 1024px */
@@ -124,13 +122,67 @@ $xxlarge-up    : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)})" !d
 $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and (max-width: #{upper-bound($xxlarge-range)})" !default;
 
 
+/* ------------------------------ Utilities  */
+
+@mixin split() {
+  /*
+    A full-height viewport splitter tool. Use at top level of SASS/CSS document.
+
+    @usage
+
+      <body>
+        <div class="rank">
+          <div class="rank">
+          </div>
+          <div class="rank">
+          </div>
+        </div>
+      </body>
+
+    @detail
+
+      -----------------------------
+      |             |             |
+      |             |             |
+      |             |             |
+      |             |             |
+      |             |             |
+      |             |             |
+      |             |             |
+      |             |             |
+      -----------------------------
+
+  */
+  html, body {
+    height: 100%;
+  }
+
+  body > .#{$rankName} {
+    min-height : 100%;
+    display    : flex;
+  }
+
+  body > .#{$rankName} > .#{$rankName} {
+    padding-left    : 0;
+    padding-right   : 0;
+
+    flex            : 1;
+    min-height      : 100%;
+
+    display         : flex;
+    justify-content : center;
+    flex-direction  : column;
+  }
+
+}
+
+
 /* ------------------------------ Grid System  */
 
 @mixin _rank( $child: "rank", $max-width: "100%" ) {
   /*
     @abstract
   */
-
   &:before {
     content : "";
     display : table;
@@ -155,8 +207,30 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 @mixin _file( $response: "l" ) {
   /*
     @abstract
-  */
+    @detail file-l4-m3-s6::file-l2-m3-s6
 
+      "large"
+      -----------------------------
+      |                   |       |
+      |                   |       |
+      -----------------------------
+
+      "medium"
+      ---------------------
+      |         |         |
+      |         |         |
+      ---------------------
+
+      "small"
+      --------
+      |      |
+      |      |
+      --------
+      |      |
+      |      |
+      --------
+
+  */
   [class*="-#{$response}6"] {
     width: 100%;
   }
@@ -224,7 +298,6 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
       </div
 
 **/
-
 @media screen and (min-width: 960px) {
   @include _file($response: "l");
 }
@@ -258,7 +331,6 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
     @consider https://github.com/marxo/Canonical.css/blob/master/canonical.scss
 
 **/
-
 * {
   line-height: 1.25em;
   @include anchors($default: $a--default, $link: $a--link, $visited: $a--visited, $hover: $a--hover, $active: $a--active);
