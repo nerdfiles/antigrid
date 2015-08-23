@@ -4,3 +4,11 @@ build/*
 env/
 .DS_Store
 .sass-cache/
+Gruntfile.coffee
+Gruntfile.coffee
+bower.json
+package.json
+readme.markdown
+sprites/
+src/
+test/
