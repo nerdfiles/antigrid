@@ -9,7 +9,7 @@
     \_____|_| |_| \__)_|\___ |_|   |_|\____|
                        (_____|
 
-A SASS-y tiny and lightweight responsive grid system with Chess nomenclature.
+A SASS-y "abstract" and lightweight responsive grid system.
 
 @project   antigrid
 @version   0.0.1
@@ -124,7 +124,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 /* ------------------------------ Utilities  */
 
-@mixin split() {
+@mixin split($enable: false) {
   /*
     A full-height viewport splitter tool. Use at top level of SASS/CSS document.
 
@@ -153,25 +153,27 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
       -----------------------------
 
   */
-  html, body {
-    height: 100%;
-  }
+  @if $enable == true {
+    &, body {
+      height: 100%;
+    }
 
-  body > .#{$rankName} {
-    min-height : 100%;
-    display    : flex;
-  }
+    body > .#{$rankName} {
+      min-height : 100%;
+      display    : flex;
+    }
 
-  body > .#{$rankName} > .#{$rankName} {
-    padding-left    : 0;
-    padding-right   : 0;
+    body > .#{$rankName} > .#{$rankName} {
+      padding-left    : 0;
+      padding-right   : 0;
 
-    flex            : 1;
-    min-height      : 100%;
+      flex            : 1;
+      min-height      : 100%;
 
-    display         : flex;
-    justify-content : center;
-    flex-direction  : column;
+      display         : flex;
+      justify-content : center;
+      flex-direction  : column;
+    }
   }
 
 }
@@ -298,6 +300,10 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
       </div
 
 **/
+:root {
+  @include split($enable: true);
+}
+
 @media screen and (min-width: 960px) {
   @include _file($response: "l");
 }
