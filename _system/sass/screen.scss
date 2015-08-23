@@ -20,13 +20,17 @@ A SASS-y "abstract" and lightweight responsive grid system.
 
 ***/
 
-/*@import "compass/reset";*/
+@import "compass/reset";
+@import "compass/css3";
 
 /* ------------------------------ Defaults  */
 
 $rankName          : "rank";
 $fileName          : "file";
 $default-max-width : "1000px";
+$column-gutter     : 10px;
+$row-gutter        : 10px;
+
 $a--default        : "#111111";
 $a--link           : "#111111";
 $a--visited        : "#999999";
@@ -414,7 +418,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 [class*="#{$fileName}"] {
   display : block;
   float   : left;
-  padding : 0 10px;
+  padding : 0 $column-gutter;
 }
 
 .#{$rankName} {
@@ -431,7 +435,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 }
 
 .flank {
-  @include flank(100px, 6, 10px);
+  @include flank(100px, 6, $row-gutter);
 }
 
 
@@ -441,25 +445,55 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 **/
 * {
-  line-height: 1.25em;
   @include anchors($default: $a--default, $link: $a--link, $visited: $a--visited, $hover: $a--hover, $active: $a--active);
 }
 
+
+/* ------------------------------ Typesetting  */
+
+$effects: "";
+
+@mixin gwf($fonts...) {
+  /*
+    @note https://github.com/sass/sass/issues/926
+  */
+  $url: "http://fonts.googleapis.com/css?family=";
+  $nb: 0;
+
+  @each $font-name in $fonts {
+    $nb: $nb + 1;
+    $nb-word: 0;
+
+    @each $word in $font-name {
+      $nb-word: $nb-word + 1;
+      $url: $url + $word;
+
+      @if $nb-word < length($font-name) {
+        $url: $url + "+";
+      }
+    }
+
+    @if $nb < length($fonts) {
+       $url: $url + "|";
+    }
+  }
+
+  @if $effects != "" {
+    /*
+      @param &effect=shadow-multiple|emboss|3d
+    */
+    $url: $url + "&effect=#{$effects}"
+
+  }
+
+  @import url(#{$url});
+}
+
+$font-p: Open Sans;
+$font-s: Roboto Slab;
+
+@include gwf($font-p, $font-s);
+
 body {
-  font-family : sans-serif;
-  color       : #313233;
-  margin     : 0;
+  font-family: Open Sans;
 }
-
-p, img {
-  margin: 0 0 20px 0;
-}
-
-pre {
-  margin: 1.6em 0;
-}
-
-strong {
-  font-style: italic;
-}
-

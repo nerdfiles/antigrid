@@ -19,10 +19,75 @@ A SASS-y "abstract" and lightweight responsive grid system.
 @license   WTFPL
 
 ***/
-/*@import "compass/reset";*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab);
+/* line 5, ../../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
 /* ------------------------------ Defaults  */
 /* ------------------------------ Global  */
-/* line 39, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 * {
   box-sizing: border-box;
 }
@@ -68,7 +133,7 @@ A SASS-y "abstract" and lightweight responsive grid system.
 /* ------------------------------ Grid System  */
 /* ------------------------------ Elements  */
 /* ------------------------------ Implementation  */
-/* line 394, ../sass/screen.scss */
+/* line 398, ../sass/screen.scss */
 :root {
   /*
     A full-height viewport splitter tool. Use at top level of SASS/CSS document.
@@ -105,16 +170,16 @@ A SASS-y "abstract" and lightweight responsive grid system.
 
   */
 }
-/* line 164, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 :root, :root body {
   height: 100%;
 }
-/* line 168, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 :root body > .rank {
   min-height: 100%;
   display: flex;
 }
-/* line 173, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 :root body > .rank > .rank {
   padding-left: 0;
   padding-right: 0;
@@ -124,7 +189,7 @@ A SASS-y "abstract" and lightweight responsive grid system.
   flex-direction: column;
 }
 
-/* line 398, ../sass/screen.scss */
+/* line 402, ../sass/screen.scss */
 :root.with-centered-ranks {
   /*
     A full-height viewport splitter tool. Use at top level of SASS/CSS document.
@@ -161,16 +226,16 @@ A SASS-y "abstract" and lightweight responsive grid system.
 
   */
 }
-/* line 164, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 :root.with-centered-ranks, :root.with-centered-ranks body {
   height: 100%;
 }
-/* line 168, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 :root.with-centered-ranks body > .rank {
   min-height: 100%;
   display: flex;
 }
-/* line 173, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 :root.with-centered-ranks body > .rank > .rank {
   padding-left: 0;
   padding-right: 0;
@@ -216,32 +281,32 @@ A SASS-y "abstract" and lightweight responsive grid system.
       --------
 
   */
-  /* line 253, ../sass/screen.scss */
+  /* line 257, ../sass/screen.scss */
   [class*="-l6"] {
     width: 100%;
   }
 
-  /* line 257, ../sass/screen.scss */
+  /* line 261, ../sass/screen.scss */
   [class*="-l5"] {
     width: 83.333333334%;
   }
 
-  /* line 261, ../sass/screen.scss */
+  /* line 265, ../sass/screen.scss */
   [class*="-l4"] {
     width: 66.666666667%;
   }
 
-  /* line 265, ../sass/screen.scss */
+  /* line 269, ../sass/screen.scss */
   [class*="-l3"] {
     width: 50%;
   }
 
-  /* line 269, ../sass/screen.scss */
+  /* line 273, ../sass/screen.scss */
   [class*="-l2"] {
     width: 33.333333333%;
   }
 
-  /* line 273, ../sass/screen.scss */
+  /* line 277, ../sass/screen.scss */
   [class*="-l1"] {
     width: 16.666666667%;
   }
@@ -281,32 +346,32 @@ A SASS-y "abstract" and lightweight responsive grid system.
       --------
 
   */
-  /* line 253, ../sass/screen.scss */
+  /* line 257, ../sass/screen.scss */
   [class*="-m6"] {
     width: 100%;
   }
 
-  /* line 257, ../sass/screen.scss */
+  /* line 261, ../sass/screen.scss */
   [class*="-m5"] {
     width: 83.333333334%;
   }
 
-  /* line 261, ../sass/screen.scss */
+  /* line 265, ../sass/screen.scss */
   [class*="-m4"] {
     width: 66.666666667%;
   }
 
-  /* line 265, ../sass/screen.scss */
+  /* line 269, ../sass/screen.scss */
   [class*="-m3"] {
     width: 50%;
   }
 
-  /* line 269, ../sass/screen.scss */
+  /* line 273, ../sass/screen.scss */
   [class*="-m2"] {
     width: 33.333333333%;
   }
 
-  /* line 273, ../sass/screen.scss */
+  /* line 277, ../sass/screen.scss */
   [class*="-m1"] {
     width: 16.666666667%;
   }
@@ -346,44 +411,44 @@ A SASS-y "abstract" and lightweight responsive grid system.
       --------
 
   */
-  /* line 253, ../sass/screen.scss */
+  /* line 257, ../sass/screen.scss */
   [class*="-s6"] {
     width: 100%;
   }
 
-  /* line 257, ../sass/screen.scss */
+  /* line 261, ../sass/screen.scss */
   [class*="-s5"] {
     width: 83.333333334%;
   }
 
-  /* line 261, ../sass/screen.scss */
+  /* line 265, ../sass/screen.scss */
   [class*="-s4"] {
     width: 66.666666667%;
   }
 
-  /* line 265, ../sass/screen.scss */
+  /* line 269, ../sass/screen.scss */
   [class*="-s3"] {
     width: 50%;
   }
 
-  /* line 269, ../sass/screen.scss */
+  /* line 273, ../sass/screen.scss */
   [class*="-s2"] {
     width: 33.333333333%;
   }
 
-  /* line 273, ../sass/screen.scss */
+  /* line 277, ../sass/screen.scss */
   [class*="-s1"] {
     width: 16.666666667%;
   }
 }
-/* line 414, ../sass/screen.scss */
+/* line 418, ../sass/screen.scss */
 [class*="file"] {
   display: block;
   float: left;
   padding: 0 10px;
 }
 
-/* line 420, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 .rank {
   /*
     @abstract
@@ -392,29 +457,29 @@ A SASS-y "abstract" and lightweight responsive grid system.
   max-width: "1000px";
   margin: 0 auto;
 }
-/* line 197, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .rank:before {
   content: "";
   display: table;
 }
-/* line 202, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .rank:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 212, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .rank .rank > [class*="file"]:first-child {
   padding-left: 0;
 }
 
-/* line 424, ../sass/screen.scss */
+/* line 428, ../sass/screen.scss */
 [class*="file"] img {
   width: 100%;
   height: auto;
 }
 
-/* line 429, ../sass/screen.scss */
+/* line 433, ../sass/screen.scss */
 .castling {
   /*
     @usage
@@ -427,21 +492,21 @@ A SASS-y "abstract" and lightweight responsive grid system.
     </ul>
   */
 }
-/* line 291, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 .castling:after {
   content: '';
   display: inline-block;
   width: 100%;
   /*border-bottom : 5px dashed #922d8d;*/
 }
-/* line 298, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .castling {
   text-align: justify;
   /*font-size   : 0;*/
   font-size: 0.1px;
   padding: 0;
 }
-/* line 305, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 .castling li {
   list-style: none;
   display: inline-block;
@@ -451,19 +516,19 @@ A SASS-y "abstract" and lightweight responsive grid system.
   font-size: 16px;
   text-align: left;
 }
-/* line 315, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 .castling .interpose {
   padding: 0;
   /*background    : none;*/
   border-bottom: 5px solid #922d8d;
 }
-/* line 321, ../sass/screen.scss */
+/* line 325, ../sass/screen.scss */
 .castling .break {
   width: 100%;
   height: 0;
 }
 
-/* line 433, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 .flank {
   /*
     Flanks include rows.
@@ -482,7 +547,7 @@ A SASS-y "abstract" and lightweight responsive grid system.
 
   */
 }
-/* line 347, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 .flank .row-1 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -490,7 +555,7 @@ A SASS-y "abstract" and lightweight responsive grid system.
   height: calc((((100vh - 100px) / 6) * 1) - 10px);
   margin-bottom: 10px;
 }
-/* line 347, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 .flank .row-2 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -498,7 +563,7 @@ A SASS-y "abstract" and lightweight responsive grid system.
   height: calc((((100vh - 100px) / 6) * 2) - 10px);
   margin-bottom: 10px;
 }
-/* line 347, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 .flank .row-3 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -506,7 +571,7 @@ A SASS-y "abstract" and lightweight responsive grid system.
   height: calc((((100vh - 100px) / 6) * 3) - 10px);
   margin-bottom: 10px;
 }
-/* line 347, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 .flank .row-4 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -514,7 +579,7 @@ A SASS-y "abstract" and lightweight responsive grid system.
   height: calc((((100vh - 100px) / 6) * 4) - 10px);
   margin-bottom: 10px;
 }
-/* line 347, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 .flank .row-5 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -522,7 +587,7 @@ A SASS-y "abstract" and lightweight responsive grid system.
   height: calc((((100vh - 100px) / 6) * 5) - 10px);
   margin-bottom: 10px;
 }
-/* line 347, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 .flank .row-6 {
   /*$offset     : $offset / $rows;*/
   overflow-x: hidden !important;
@@ -536,49 +601,32 @@ A SASS-y "abstract" and lightweight responsive grid system.
     @consider https://github.com/marxo/Canonical.css/blob/master/canonical.scss
 
 **/
-/* line 443, ../sass/screen.scss */
-* {
-  line-height: 1.25em;
-}
-/* line 367, ../sass/screen.scss */
+/* line 371, ../sass/screen.scss */
 * a {
   color: "#111111";
 }
-/* line 371, ../sass/screen.scss */
+/* line 375, ../sass/screen.scss */
 * a:link {
   color: "#111111";
 }
-/* line 375, ../sass/screen.scss */
+/* line 379, ../sass/screen.scss */
 * a:visited {
   color: "#999999";
 }
-/* line 379, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 * a:hover {
   color: "#f1f1f1";
 }
-/* line 383, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 * a:active {
   color: "#003399";
 }
 
-/* line 448, ../sass/screen.scss */
+/* ------------------------------ Typesetting  */
+/*
+  @note https://github.com/sass/sass/issues/926
+*/
+/* line 497, ../sass/screen.scss */
 body {
-  font-family: sans-serif;
-  color: #313233;
-  margin: 0;
-}
-
-/* line 454, ../sass/screen.scss */
-p, img {
-  margin: 0 0 20px 0;
-}
-
-/* line 458, ../sass/screen.scss */
-pre {
-  margin: 1.6em 0;
-}
-
-/* line 462, ../sass/screen.scss */
-strong {
-  font-style: italic;
+  font-family: Open Sans;
 }
