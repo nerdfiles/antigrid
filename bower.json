@@ -1,0 +1,31 @@
+{
+  "name": "antigrid",
+  "version": "0.0.3",
+  "homepage": "http://nerdfiles.net/antigrid",
+  "authors": [
+    "nerdfiles <hello@nerdfiles.net>"
+  ],
+  "description": "I hate grid systems so much I just had to make another one.",
+  "main": "_system/config.rb",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "css-framework",
+    "grid",
+    "system",
+    "compass",
+    "sass",
+    "stylesheets",
+    "organic-css",
+    "bem"
+  ],
+  "license": "WTFPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
