@@ -5,6 +5,18 @@ other niceties.
 
 ## Features
 
+### Block-Element-Modifier
+
+OOCSS would require “message passing”; so at best, OOCSS is a “pseudo-object-
+oriented” or at least a namespace convention that is nearly as flexible as 
+those namespaces we consistently craft in prototypal OO-languages.
+
+BEM gives the cleanest syntactical, non-workflow-intrusive strategy to map 
+complex symbol structures in CSS to OO-ish code written in JavaScript.
+
+SASS is merely a luxury here, while Organic CSS on a BEM substrate is the 
+main purpose.
+
 ### Mixins
 
 1. Vertically Centered Grids and Elements
