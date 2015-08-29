@@ -430,7 +430,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 /* ------------------------------ Views  */
 
-@mixin _ViewTokenizer($root: "aside", $tokens...) {
+@mixin _ViewTokenizer($tokens...) {
   /**
    @description
    Token mapper to URL contracts within Interface and collocated with with 
@@ -445,6 +445,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
   $nb: 0;
   $base: "pages";
   $sep: "/";
+  $contexts: ();
   @each $tokenConstruct in $tokens {
     $nb: $nb + 1;
     $nb-word: 0;
@@ -454,8 +455,9 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
       $nb-word: $nb-word + 1;
       $base: $base + $sep + $word;
+      $contexts: append($contexts, $base, comma);
 
-      #{$root}[class*="#{$base}"] {
+      [class*="#{$contexts}"] {
         @content;
       }
 
@@ -463,9 +465,9 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
   }
 }
 
-@mixin ListView($view-1: "base", $view-2: "home") {
+@mixin ListView($_tokens...) {
   /**
-    @example pages/home.scss::contains::@include ListView($view-1: "news") { ... }
+    @example pages/home.scss::contains::@include ListView((aside news)) { ... }
 
              HTML will contain somewhere non-arbitrarily and probably with 
              an @ng-repeat sprinkled about. (Generally what we are doing is 
@@ -499,7 +501,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
                   SASS/SCSS (file: pages/news.scss):
 
                      section[class*="news"] {
-                       @include ListView($view-1: "news") {
+                       @include ListView((aside news)) {
                          background-color: transparent;
                        }
                      }
@@ -513,17 +515,17 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
              Yes, I'm arguing that <div>s are actually semantic, but within the 
              context of the IoT.
   **/
-  @include _ViewTokenizer($root: "ul", $tokens: ($view-1, $view-2)) {
-    background-color: transparent;
+  @include _ViewTokenizer($_tokens) {
+    @content;
   }
 }
 
-@mixin DetailView($view-1: "base", $view-2: "contact") {
+@mixin DetailView($_tokens...) {
   /**
     @example pages/base, pages/home
   **/
-  @include _ViewTokenizer($root: "form", $tokens: ($view-1, $view-2)) {
-    background-color: transparent;
+  @include _ViewTokenizer($_tokens) {
+    @content;
   }
 }
 
@@ -669,3 +671,4 @@ $font-p: Open Sans;
 $font-s: Roboto Slab;
 
 @include gwf($font-p, $font-s);
+
