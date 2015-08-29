@@ -196,7 +196,48 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 /* ------------------------------ Grid System  */
 
-@mixin _rank( $child: "rank", $max-width: "100%" ) {
+@mixin _tablebase($flex-direction: row, $flex-flow: row nowrap, $flex-wrap: nowrap, $justify-content: flex-start, $align-content: stretch, $align-items: stretch, $align-self: auto, $order: false) {
+
+  display          : flex;
+
+  @if variable-exists(flex-flow) == true {
+    flex-flow      : $flex-flow;       /* @options $flex-direction $flex-wrap */
+  }
+
+  @if variable-exists(flex-flow) != true {
+    flex-direction : $flex-direction;  /* @options row, column */
+    flex-wrap      : $flex-wrap;       /* @options wrap, nowrap, wrap-reverse */
+  }
+
+  justify-content  : $justify-content; /* @options flex-start, flex-end, center, space-between, space-around */
+  align-content    : $align-content;   /* @options flex-start, flex-end, center, space-between, space-around, stretch */
+  align-items      : $align-items;     /* @options flex-start, flex-end, center, baseline, stretch */
+
+  //@if $align-self != auto {
+  //  align-self     : $align-self;
+  //}
+
+  & > * {
+    flex-grow   : 0;
+    flex-shrink : 0;
+    flex-basis  : 25%;
+    @content;
+  }
+
+  $nb: 0;
+
+  @if $order != false {
+    @each $item-order in $order {
+      $nb: $nb + 1;
+      & > *:nth-of-type(#{$nb}) {
+        order: $item-order;
+      }
+    }
+  }
+
+}
+
+@mixin _rank( $child: "rank", $max-width: 100% ) {
   /*
     @abstract
   */
@@ -211,9 +252,10 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
     clear   : both;
   }
 
-  width     : 100%;
-  max-width : $max-width;
-  margin    : 0 auto;
+  width        : 100%;
+  max-width    : $max-width;
+  margin-left  : auto;
+  margin-right : auto;
 
   & .#{$child} > [class*="#{$fileName}"]:first-child {
     padding-left: 0;
@@ -286,8 +328,9 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
   // @schema "file-R{{N}}" && "__centered"
   [class*="-#{$response}"][class*="__centered"] {
-    float  : none !important;
-    margin : 0 auto;
+    float        : none !important;
+    margin-left  : auto;
+    margin-right : auto;
   }
 
 
@@ -332,7 +375,11 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
       width      : $width;
       transition : all 150ms ease-out;
       font-size  : 16px;
-      text-align : left;
+      @if $width == 50% {
+        text-align: center;
+      } else {
+        text-align : left;
+      }
       float      : none !important;
     }
 
@@ -381,6 +428,75 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 }
 
 
+/* ------------------------------ Views  */
+
+@mixin _tokenizer($root: "aside", $tokens...) {
+  /**
+   @description
+   Token mapper to URL contracts within Interface and collocated with with 
+   routes.js or ui-router state machines, which themselves map to class-based 
+   views in Django; and these views can be modularized controllerAs within the 
+   AMD schema facilitated by angularAMD; this makes it scalable to package SCSS 
+   within "web" metamodules in large-scale AMD implementations.
+   @params arguments Tokens to represent URL entities.
+   @example
+   "orders/_base" as value to import within primary interface.
+  **/
+  $nb: 0;
+  $base: "pages";
+  $sep: "/";
+  @each $tokenConstruct in $tokens {
+    $nb: $nb + 1;
+    $nb-word: 0;
+
+    $base: $base + $tokenConstruct;
+    @each $word in $tokenConstruct {
+
+      $nb-word: $nb-word + 1;
+      $base: $base + $sep + $word;
+
+      #{$root}[class*="#{$base}"] {
+        @content;
+      }
+
+    }
+  }
+}
+
+@mixin _listView($view-1: "base", $view-2: "home") {
+  /**
+    @example pages/home.scss::contains::@include _listView($view-1: "news") 
+
+             HTML will contain somewhere non-arbitrarily and probably with 
+             an @ng-repeat sprinkled about. (Generally what we are doing is 
+             predicting areas of complexity and attempting to manage that 
+             complexity with restrictive class-based views.):
+             <ul class="pages/news">
+
+             This idea is proffered within the grid system class nominalizing 
+             procedure. We might ask "Why <div>s?" and answer: well, they are 
+             non-semantic, which is practically a vacuous answer because <div>s 
+             are always chosen for a *reason*, just not one that is privy to 
+             typesetting or journalism, and typically for "web rationales", etc.
+
+             Yes, I'm arguing that <div>s are actually semantic, but within the 
+             context of the IoT.
+  **/
+  @include _tokenizer($root: "ul", $tokens: $view-1, $view-2) {
+    background-color: transparent;
+  }
+}
+
+@mixin _detailView($view-1: "base", $view-2: "contact") {
+  /**
+    @example pages/base, pages/home
+  **/
+  @include _tokenizer($root: "form", $tokens: $view-1, $view-2) {
+    background-color: transparent;
+  }
+}
+
+
 /* ------------------------------ Elements  */
 
 @mixin anchors( $default, $link, $visited, $hover, $active ) {
@@ -404,6 +520,8 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
     &:active {
       color: $active;
     }
+
+    @content;
 
   }
 
@@ -447,16 +565,22 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
   height : auto;
 }
 
-.centered {
-  @include centered();
+[class*="castling"]:not([class*="__queen-side"]) {
+  @include castling();
 }
 
-.castling {
-  @include castling();
+[class*="castling"][class*="__queen-side"] {
+  @include castling($width: 50%);
 }
 
 .flank {
   @include flank(100px, 6, $row-gutter);
+}
+
+.tablebase {
+  @include _tablebase($flex-wrap: wrap) {
+    flex-grow: 1;
+  }
 }
 
 
