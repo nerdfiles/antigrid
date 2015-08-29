@@ -484,7 +484,25 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
              </ul>
 
              Your SASS will probably say something specific about how articles 
-             should look within the given file's implied page context.
+             should look within the given file's implied page context, and so 
+             developers MAY contextualize here:
+
+                 HTML:
+
+                     <section
+                       class="content-type--news"
+                       id="related-news"
+                     >
+                       <!-- contains the above example -->
+                     </section>
+
+                  SASS/SCSS (file: pages/news.scss):
+
+                     section[class*="news"] {
+                       @include ListView($view-1: "news") {
+                         background-color: transparent;
+                       }
+                     }
 
              This idea is proffered within the grid system class nominalizing 
              procedure. We might ask "Why <div>s?" and answer: well, they are 
