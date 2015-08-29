@@ -465,7 +465,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 @mixin ListView($view-1: "base", $view-2: "home") {
   /**
-    @example pages/home.scss::contains::@include ListView($view-1: "news") { /* ... */ }
+    @example pages/home.scss::contains::@include ListView($view-1: "news") { ... }
 
              HTML will contain somewhere non-arbitrarily and probably with 
              an @ng-repeat sprinkled about. (Generally what we are doing is 
