@@ -646,8 +646,4 @@ $effects: "";
 $font-p: Open Sans;
 $font-s: Roboto Slab;
 
-@include gwf($fonts: ($font-p, $font-s));
-
-body {
-  font-family: Open Sans;
-}
+@include gwf($font-p, $font-s);
