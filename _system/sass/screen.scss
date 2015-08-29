@@ -491,7 +491,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
              Yes, I'm arguing that <div>s are actually semantic, but within the 
              context of the IoT.
   **/
-  @include _tokenizer($root: "ul", $tokens: $view-1, $view-2) {
+  @include _tokenizer($root: "ul", $tokens: ($view-1, $view-2)) {
     background-color: transparent;
   }
 }
@@ -500,7 +500,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
   /**
     @example pages/base, pages/home
   **/
-  @include _tokenizer($root: "form", $tokens: $view-1, $view-2) {
+  @include _tokenizer($root: "form", $tokens: ($view-1, $view-2)) {
     background-color: transparent;
   }
 }
@@ -647,7 +647,3 @@ $font-p: Open Sans;
 $font-s: Roboto Slab;
 
 @include gwf($font-p, $font-s);
-
-body {
-  font-family: Open Sans;
-}
