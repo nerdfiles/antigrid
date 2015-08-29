@@ -430,7 +430,7 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
 
 /* ------------------------------ Views  */
 
-@mixin _tokenizer($root: "aside", $tokens...) {
+@mixin _ViewTokenizer($root: "aside", $tokens...) {
   /**
    @description
    Token mapper to URL contracts within Interface and collocated with with 
@@ -463,9 +463,9 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
   }
 }
 
-@mixin _listView($view-1: "base", $view-2: "home") {
+@mixin ListView($view-1: "base", $view-2: "home") {
   /**
-    @example pages/home.scss::contains::@include _listView($view-1: "news") 
+    @example pages/home.scss::contains::@include ListView($view-1: "news") { /* ... */ }
 
              HTML will contain somewhere non-arbitrarily and probably with 
              an @ng-repeat sprinkled about. (Generally what we are doing is 
@@ -491,16 +491,16 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
              Yes, I'm arguing that <div>s are actually semantic, but within the 
              context of the IoT.
   **/
-  @include _tokenizer($root: "ul", $tokens: ($view-1, $view-2)) {
+  @include _ViewTokenizer($root: "ul", $tokens: ($view-1, $view-2)) {
     background-color: transparent;
   }
 }
 
-@mixin _detailView($view-1: "base", $view-2: "contact") {
+@mixin DetailView($view-1: "base", $view-2: "contact") {
   /**
     @example pages/base, pages/home
   **/
-  @include _tokenizer($root: "form", $tokens: ($view-1, $view-2)) {
+  @include _ViewTokenizer($root: "form", $tokens: ($view-1, $view-2)) {
     background-color: transparent;
   }
 }
