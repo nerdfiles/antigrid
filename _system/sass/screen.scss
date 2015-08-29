@@ -471,7 +471,16 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
              an @ng-repeat sprinkled about. (Generally what we are doing is 
              predicting areas of complexity and attempting to manage that 
              complexity with restrictive class-based views.):
-             <ul class="pages/news">
+
+             <ul>
+               <li
+               ng-class="{
+                 'pages/news': true
+               }">
+                 ...
+               </li>
+               ...
+             </ul>
 
              This idea is proffered within the grid system class nominalizing 
              procedure. We might ask "Why <div>s?" and answer: well, they are 
