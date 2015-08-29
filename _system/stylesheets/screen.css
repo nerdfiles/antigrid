@@ -136,7 +136,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* ------------------------------ Views  */
 /* ------------------------------ Elements  */
 /* ------------------------------ Implementation  */
-/* line 542, ../sass/screen.scss */
+/* line 546, ../sass/screen.scss */
 :root {
   /*
     A full-height viewport splitter tool. Use at top level of SASS/CSS document.
@@ -192,7 +192,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   flex-direction: column;
 }
 
-/* line 546, ../sass/screen.scss */
+/* line 550, ../sass/screen.scss */
 :root.with-centered-ranks {
   /*
     A full-height viewport splitter tool. Use at top level of SASS/CSS document.
@@ -471,14 +471,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 0;
   }
 }
-/* line 562, ../sass/screen.scss */
+/* line 566, ../sass/screen.scss */
 [class*="file"] {
   display: block;
   float: left;
   padding: 0 10px;
 }
 
-/* line 568, ../sass/screen.scss */
+/* line 572, ../sass/screen.scss */
 .rank {
   /*
     @abstract
@@ -508,13 +508,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-right: 0;
 }
 
-/* line 572, ../sass/screen.scss */
+/* line 576, ../sass/screen.scss */
 [class*="file"] img {
   width: 100%;
   height: auto;
 }
 
-/* line 577, ../sass/screen.scss */
+/* line 581, ../sass/screen.scss */
 [class*="castling"]:not([class*="__queen-side"]) {
   /*
     @usage
@@ -562,7 +562,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 0;
 }
 
-/* line 581, ../sass/screen.scss */
+/* line 585, ../sass/screen.scss */
 [class*="castling"][class*="__queen-side"] {
   /*
     @usage
@@ -611,7 +611,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 0;
 }
 
-/* line 585, ../sass/screen.scss */
+/* line 589, ../sass/screen.scss */
 .flank {
   /*
     Flanks include rows.
@@ -679,7 +679,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 10px;
 }
 
-/* line 589, ../sass/screen.scss */
+/* line 593, ../sass/screen.scss */
 .tablebase {
   display: flex;
   flex-flow: row nowrap;
@@ -704,23 +704,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     @consider https://github.com/marxo/Canonical.css/blob/master/canonical.scss
 
 **/
-/* line 513, ../sass/screen.scss */
+/* line 517, ../sass/screen.scss */
 * a {
   color: #111111;
 }
-/* line 517, ../sass/screen.scss */
+/* line 521, ../sass/screen.scss */
 * a:link {
   color: #111111;
 }
-/* line 521, ../sass/screen.scss */
+/* line 525, ../sass/screen.scss */
 * a:visited {
   color: #999999;
 }
-/* line 525, ../sass/screen.scss */
+/* line 529, ../sass/screen.scss */
 * a:hover {
   color: #f1f1f1;
 }
-/* line 529, ../sass/screen.scss */
+/* line 533, ../sass/screen.scss */
 * a:active {
   color: #003399;
 }

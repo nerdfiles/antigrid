@@ -472,15 +472,19 @@ $xxlarge-only  : "#{$screen} and (min-width: #{lower-bound($xxlarge-range)}) and
              predicting areas of complexity and attempting to manage that 
              complexity with restrictive class-based views.):
 
-             <ul>
-               <li
+             <ul
                ng-class="{
                  'pages/news': true
-               }">
+               }"
+             >
+               <li ng-repeat="article in news">
                  ...
                </li>
                ...
              </ul>
+
+             Your SASS will probably say something specific about how articles 
+             should look within the given file's implied page context.
 
              This idea is proffered within the grid system class nominalizing 
              procedure. We might ask "Why <div>s?" and answer: well, they are 
