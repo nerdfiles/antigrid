@@ -1,41 +1,47 @@
 /*
-Error: Positional arguments must come before keyword arguments.
-        on line 494 of /Users/nerdfiles/Projects/antigrid/_system/sass/screen.scss
+Error: Argument $fonts of mixin gwf cannot be used as a named argument.
+        on line 649 of /Users/nerdfiles/Projects/antigrid/_system/sass/screen.scss, in `gwf'
+        from line 649 of /Users/nerdfiles/Projects/antigrid/_system/sass/screen.scss
 
-489:              typesetting or journalism, and typically for "web rationales", etc.
-490: 
-491:              Yes, I'm arguing that <div>s are actually semantic, but within the 
-492:              context of the IoT.
-493:   **\/
-494:   @include _tokenizer($root: "ul", $tokens: $view-1, $view-2) {
-495:     background-color: transparent;
-496:   }
-497: }
-498: 
-499: @mixin _detailView($view-1: "base", $view-2: "contact") {
+644: }
+645: 
+646: $font-p: Open Sans;
+647: $font-s: Roboto Slab;
+648: 
+649: @include gwf($fonts: ($font-p, $font-s));
+650: 
+651: body {
+652:   font-family: Open Sans;
+653: }
 
 Backtrace:
-/Users/nerdfiles/Projects/antigrid/_system/sass/screen.scss:494
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/parser.rb:479:in `block in arglist'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/parser.rb:460:in `loop'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/parser.rb:460:in `arglist'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/parser.rb:449:in `mixin_arglist'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/script/parser.rb:100:in `parse_mixin_include_arglist'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1027:in `sass_script'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:236:in `include_directive'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:219:in `special_directive'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:194:in `directive'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:661:in `block_child'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:650:in `block_contents'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:642:in `block'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:231:in `mixin_directive'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:219:in `special_directive'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:194:in `directive'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:660:in `block_child'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:653:in `block_contents'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:42:in `parse'
-/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/engine.rb:393:in `_to_tree'
+/Users/nerdfiles/Projects/antigrid/_system/sass/screen.scss:649:in `gwf'
+/Users/nerdfiles/Projects/antigrid/_system/sass/screen.scss:649
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:29:in `perform_arguments'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:358:in `block in visit_mixin'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
 /Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
 /Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
 /Users/nerdfiles/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
@@ -57,4 +63,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Positional arguments must come before keyword arguments.\A         on line 494 of /Users/nerdfiles/Projects/antigrid/_system/sass/screen.scss\A \A 489:              typesetting or journalism, and typically for \"web rationales\", etc.\A 490: \A 491:              Yes, I'm arguing that <div>s are actually semantic, but within the \A 492:              context of the IoT.\A 493:   **/\A 494:   @include _tokenizer($root: \"ul\", $tokens: $view-1, $view-2) {\A 495:     background-color: transparent;\A 496:   }\A 497: }\A 498: \A 499: @mixin _detailView($view-1: \"base\", $view-2: \"contact\") {"; }
+  content: "Error: Argument $fonts of mixin gwf cannot be used as a named argument.\A         on line 649 of /Users/nerdfiles/Projects/antigrid/_system/sass/screen.scss, in `gwf'\A         from line 649 of /Users/nerdfiles/Projects/antigrid/_system/sass/screen.scss\A \A 644: }\A 645: \A 646: $font-p: Open Sans;\A 647: $font-s: Roboto Slab;\A 648: \A 649: @include gwf($fonts: ($font-p, $font-s));\A 650: \A 651: body {\A 652:   font-family: Open Sans;\A 653: }"; }
